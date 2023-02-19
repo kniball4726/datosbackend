@@ -1,0 +1,28 @@
+{
+  "name": "datosbackend",
+  "version": "1.0.0",
+  "description": "Api Rest de conexión mongo y ReactJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kniball4726/datosbackend.git"
+  },
+  "keywords": [
+    "web",
+    "suplements",
+    "backend",
+    "api",
+    "rest",
+    "deposito",
+    "stock"
+  ],
+  "author": "Gregory Rodriguez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kniball4726/datosbackend/issues"
+  },
+  "homepage": "https://github.com/kniball4726/datosbackend#readme"
+}
