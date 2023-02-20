@@ -9,7 +9,7 @@ const port = process.env.PORT || 3901;
 
 
 const server = () => {
-    console.log('Iniciando servidor en el puerto: '+port)
+    console.log('Iniciando servidor')
     if(app.listen(port, ()=>{})){
         console.log('Servidor escuchando por el puerto: '+port)
     }else{
