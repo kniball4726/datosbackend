@@ -1,7 +1,7 @@
 const validar = require("validator");
 const Articulo = require("../models/Productos");
 
-const crear = (req, res) => {
+const create = (req, res) => {
     //Recoger parametros por post a guardar
     let parametros = req.body;
 
@@ -47,6 +47,12 @@ const crear = (req, res) => {
     
 }
 
+const read = (req, res) => {
+    return res.status(200).json({
+        mensaje: "Probando",
+      })}
+
 module.exports = {
-     crear
+     create,
+     read
 }
