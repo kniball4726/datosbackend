@@ -1,6 +1,14 @@
 const validar = require("validator");
 const Articulo = require("../models/Productos");
 
+const probando = (req, res) => {
+    console.log('Endpoint de Prueba Ejecutandose')
+    return res.status(200).json({
+        nombre: 'Gregory Rodriguez',
+        dni: 95777596
+    });
+}
+
 const create = (req, res) => {
     //Recoger parametros por post a guardar
     let parametros = req.body;
@@ -53,6 +61,7 @@ const read = (req, res) => {
       })}
 
 module.exports = {
-     create,
-     read
+    probando,
+    create,
+    read
 }
