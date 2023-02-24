@@ -19,7 +19,7 @@ console.log('Iniciando Api Rest | Starting ApiRest');
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
-//rutas
+//rutas hardcodeadas
 
 app.get('/probando', (req, res) => {
     console.log('Se ha ejecutado endpoint de prueba')
