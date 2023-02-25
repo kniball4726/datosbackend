@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 const port = process.env.PORT || 3901;
 
-const server = () => {
+const servercon = () => {
     if(app.listen(port, ()=>{})){
         console.log('Servidor escuchando por el puerto: '+port)
     }else{
@@ -16,4 +16,4 @@ const server = () => {
     }
 }
 
-module.exports = server;
+module.exports = servercon;

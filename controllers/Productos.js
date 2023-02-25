@@ -12,11 +12,13 @@ const probando = (req, res) => {
 const create = (req, res) => {
     //Recoger parametros por post a guardar
     let parametros = req.body;
+    let codigo = parametros.codigo;
+    let nombre = parametros.nombre;
 
     //validar datos
     try{
-        const validarCodigo = !validar.isEmpty(parametros.codigo)
-        const validarNombre = !validar.isEmpty(parametros.nombre)
+        const validarCodigo = !validar.isEmpty(codigo)
+        const validarNombre = !validar.isEmpty(nombre)
         
         if(!validarCodigo || !validarNombre){
             throw new Error("No se ha validado la informacion");
