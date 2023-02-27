@@ -34,7 +34,7 @@ const create = (req, res) => {
     //crear objeto a guardar en bd
     const productos = new Productos(parametros);
     //guardando datos en bd
-    Productos.save((error, productoGuardado) => {
+    productos.save((error, productoGuardado) => {
         if(error || !productoGuardado){
             return res.status(400).json({
                 status:"error",
