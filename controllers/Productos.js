@@ -1,5 +1,5 @@
 const validar = require("validator");
-const Articulo = require("../models/Productos");
+const Productos = require("../models/Productos");
 
 const probando = (req, res) => {
     console.log('Endpoint de Prueba Ejecutandose')
@@ -12,13 +12,15 @@ const probando = (req, res) => {
 const create = (req, res) => {
     //Recoger parametros por post a guardar
     let parametros = req.body;
+    let codigo = parametros.codigo;
+    let nombre = parametros.nombre;
 
     //validar datos
     try{
-        const validarTitulo = !validar.isEmpty(parametros.titulo)
-        const validarContenido = !validar.isEmpty(parametros.contenido)
+        const validarCodigo = !validar.isEmpty(codigo)
+        const validarNombre = !validar.isEmpty(nombre)
         
-        if(!validarTitulo || !validarContenido){
+        if(!validarCodigo || !validarNombre){
             throw new Error("No se ha validado la informacion");
         }
 
@@ -30,9 +32,9 @@ const create = (req, res) => {
 }
         
     //crear objeto a guardar en bd
-    const producto = new Producto(parametros);
+    const productos = new Productos(parametros);
     //guardando datos en bd
-    producto.save((error, productoGuardado) => {
+    Productos.save((error, productoGuardado) => {
         if(error || !productoGuardado){
             return res.status(400).json({
                 status:"error",
@@ -40,8 +42,8 @@ const create = (req, res) => {
             })
         }else{
             return res.status(200).json({
-                satatus:"succes",
-                articulo: productoGuardado,
+                status:"succes",
+                producto: productoGuardado,
                 mensaje: "Producto guardado con exito"
             })
         }
@@ -60,8 +62,18 @@ const read = (req, res) => {
         mensaje: "Probando",
       })}
 
+const update = (req, res) => {
+
+}
+
+const deleted = (req, res) => {
+
+}
+
 module.exports = {
     probando,
     create,
-    read
+    read,
+    update,
+    deleted
 }
