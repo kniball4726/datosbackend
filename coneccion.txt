@@ -1,0 +1,9 @@
+conectar aplicacion
+mongodb+srv://GregRodriguez:<password>@websup.on2ajgc.mongodb.net/?retryWrites=true&w=majority
+
+conectar compass
+mongodb+srv://GregRodriguez:<password>@websup.on2ajgc.mongodb.net/test
+
+datos
+websup
+skpPpXJ2NO6XYvyF
