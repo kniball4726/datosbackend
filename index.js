@@ -27,4 +27,3 @@ database();
 //rutas
 const rutas = require('./routes/Productos');
 app.use("/api", rutas)
-
