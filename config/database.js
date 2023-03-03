@@ -9,7 +9,6 @@ const database = async() =>{
     console.log('Iniciando conexión a la base de datos');
     try{
        await mongoose.connect(db_uri),
-       await mongoose.connect(db_uri)
         /*,{
             useNewUrlParser: true,
             useUnifiedTopology: true,
