@@ -8,12 +8,8 @@ const ProductosSchema = Schema({
     nombre: {
         type: String,
         require: true
-    },
-    imagen:{
-        type: String,
-        default: "product.png"
     }
 });
 
-module.exports = model("Productos", ProductosSchema,"productos");
+module.exports = model("Productos", ProductosSchema);
 

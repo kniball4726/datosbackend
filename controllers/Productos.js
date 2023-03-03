@@ -12,13 +12,11 @@ const probando = (req, res) => {
 const create = (req, res) => {
     //Recoger parametros por post a guardar
     let parametros = req.body;
-    let codigo = parametros.codigo;
-    let nombre = parametros.nombre;
-
+  
     //validar datos
-    try{
-        const validarCodigo = !validar.isEmpty(codigo)
-        const validarNombre = !validar.isEmpty(nombre)
+   /* try{
+        const validarCodigo = !validar.isEmpty(parametros.codigo)
+        const validarNombre = !validar.isEmpty(parametros.nombre)
         
         if(!validarCodigo || !validarNombre){
             throw new Error("No se ha validado la informacion");
@@ -29,7 +27,7 @@ const create = (req, res) => {
             status: "error",
             mensaje: "Faltan datos"
     })
-}
+}*/
         
     //crear objeto a guardar en bd
     const productos = new Productos(parametros);
