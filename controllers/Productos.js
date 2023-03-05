@@ -1,5 +1,5 @@
 const validar = require("validator");
-const Productos = require("../models/Productos");
+const Producto = require("../models/Productos");
 
 const probando = (req, res) => {
     console.log('Endpoint de Prueba Ejecutandose')
@@ -12,14 +12,16 @@ const probando = (req, res) => {
 const create = (req, res) => {
     //Recoger parametros por post a guardar
     let parametros = req.body;
-  
+    
     //validar datos
-   /* try{
+   /*try{
         const validarCodigo = !validar.isEmpty(parametros.codigo)
         const validarNombre = !validar.isEmpty(parametros.nombre)
         
-        if(!validarCodigo || !validarNombre){
+        if(validarCodigo || validarNombre){
             throw new Error("No se ha validado la informacion");
+        }else{
+            console.log("Datos validados con exito")
         }
 
     }catch(error){
@@ -30,7 +32,7 @@ const create = (req, res) => {
 }*/
         
     //crear objeto a guardar en bd
-    const productos = new Productos(parametros);
+    const productos = new Producto(parametros);
     //guardando datos en bd
     productos.save((error, productoGuardado) => {
         if(error || !productoGuardado){

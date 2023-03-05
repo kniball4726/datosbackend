@@ -24,7 +24,6 @@ if (app.listen(port, () =>{})){
 //servercon();
 database();
 
-
 //rutas
-const rutas = require('./routes/Productos');
+const rutas = require("./routes/Productos");
 app.use("/api", rutas)
