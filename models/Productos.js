@@ -3,10 +3,16 @@ const mongoose = require('mongoose');
 const ProductoSchema = new mongoose.Schema(
     {
         codigo: {
-            type: Number
+            type: Number,
+            require: true
         },
         producto: {
-            type: String
+            type: String,
+            require: true
+        },
+        imagen: {
+            type: String,
+            default: "default.png"
         }
 
     },
@@ -17,19 +23,3 @@ const ProductoSchema = new mongoose.Schema(
 )
 
 module.exports = mongoose.model("Producto", ProductoSchema,"productos")
-
-/*const { Schema , model } = require('mongoose');
-
-const ProductoSchema = Schema({
-    codigo: {
-        type: Number,
-        require: true
-    },
-    nombre: {
-        type: String,
-        require: true
-    }
-});
-
-module.exports = model("Producto", ProductoSchema,"productos");*/
-

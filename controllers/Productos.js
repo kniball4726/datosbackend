@@ -14,11 +14,11 @@ const create = (req, res) => {
     let parametros = req.body;
     
     //validar datos
-   /*try{
-        const validarCodigo = !validar.isEmpty(parametros.codigo)
-        const validarNombre = !validar.isEmpty(parametros.nombre)
+   try{
+        const validarCodigo = validar.isEmpty(parametros.codigo)
+        const validarProducto = validar.isEmpty(parametros.producto)
         
-        if(validarCodigo || validarNombre){
+        if(validarCodigo || validarProducto){
             throw new Error("No se ha validado la informacion");
         }else{
             console.log("Datos validados con exito")
@@ -29,7 +29,7 @@ const create = (req, res) => {
             status: "error",
             mensaje: "Faltan datos"
     })
-}*/
+}
         
     //crear objeto a guardar en bd
     const productos = new Producto(parametros);
